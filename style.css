@@ -1,8 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  background: #F7F7F7;
+}
+
+h1, h3, h2 {
+  margin: 0;
 }
 
 header {
@@ -14,27 +19,254 @@ header {
 }
 
 footer {
-  height: 197px;
+  height: 180px;
   padding-top: 22px;
   padding-left: 25px;
   background: #353535;
   color: #ffffff;
 }
-footer .boxFooter {
+
+.boxFooter {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
   width: 100%;
 }
-footer .boxFooter:first-child {
+.boxFooter_logo {
   margin-bottom: 18px;
   width: 130px;
 }
-footer .boxFooter div {
+.boxFooter div {
   font-weight: 500;
   font-size: 16px;
   width: 100%;
+  margin-bottom: 7px;
+}
+.boxFooter span {
+  width: 100%;
+  margin-bottom: 7px;
+}
+.boxFooter img {
+  margin-right: 11px;
+}
+
+.localisationBox {
+  background: #EAEAEA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #353535;
+  box-shadow: inset 0px 6px 15px -14px #353535;
+}
+.localisationBox div {
+  margin-left: -31px;
+}
+.localisationBox img {
+  margin-right: 17px;
+}
+
+.discover {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.discover_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 34px;
+  width: 65%;
+}
+.discover_box h2 {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.discover_box span {
+  font-weight: 300;
+  font-size: 18px;
+  color: #353535;
+  font-style: normal;
+  width: max-content;
+}
+.discover_box button {
+  color: white;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  width: 186px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  margin-top: 27px;
+  cursor: pointer;
+}
+.discover_box button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
+
+.fonctionnement {
+  width: 100%;
+  height: 440px;
+  background: white;
+}
+.fonctionnement_box {
+  padding-top: 48px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.fonctionnement_box h2 {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 26px;
+}
+.fonctionnement_box_indicationBox_part {
+  height: 72.38px;
+  background: #F7F7F7;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 25px;
+}
+.fonctionnement_box_indicationBox_part:hover {
+  background: #F5EDFF;
+}
+.fonctionnement_box_indicationBox_part:hover svg path {
+  fill: #9356DC;
+}
+.fonctionnement_box_indicationBox_part_box {
+  display: flex;
+  align-items: flex-end;
+  font-weight: 500;
+  font-size: 16px;
+}
+.fonctionnement_box_indicationBox_part_box span {
+  margin-left: 27px;
+}
+.fonctionnement_box_indicationBox_part_box svg {
+  margin-left: 22px;
+}
+.fonctionnement_box_indicationBox_part_box_number {
+  width: 24px;
+  height: 24px;
+  background: #9356DC;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -10px;
+}
+
+.restaurants {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 64px;
+}
+.restaurants h2 {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 25px;
+  margin-top: 52px;
+}
+.restaurants_card {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 251px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 18px;
+}
+.restaurants_card_top {
+  align-self: flex-end;
+  width: 80px;
+  height: 29px;
+  background: #99E2D0;
+  color: #008766;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 13px;
+  margin-right: 12px;
+}
+.restaurants_card_bottom {
+  background: white;
+  height: 25%;
+  border-radius: 0 0 15px 15px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 13px;
+  padding-bottom: 12px;
+}
+.restaurants_card_bottom_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.restaurants_card_bottom_info h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+}
+.restaurants_card_bottom_info span {
+  font-weight: 300;
+  font-size: 17px;
+  margin-top: 5px;
+}
+.restaurants_card_bottom_like {
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.restaurants_card_bottom_like svg path {
+  fill: linear-gradient(#e66465, #9198e5);
+}
+
+.menilmontant, .charonne, .citeRouge, .folieMericourt {
+  background-repeat: no-repeat;
+}
+
+.menilmontant {
+  background-position: right -1px bottom 75px;
+  background-size: 100% 100%;
+  background-image: url("./Maquettes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+
+.charonne {
+  background-size: 101% 170%;
+  background-position: right -1px bottom -24px;
+  background-image: url("./Maquettes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+
+.citeRouge {
+  background-position: right -1px bottom 75px;
+  background-size: 100% 100%;
+  background-image: url("./Maquettes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+
+.folieMericourt {
+  background-position: right -1px bottom 75px;
+  background-size: 100% 100%;
+  background-image: url("./Maquettes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
+.citeRouge, .folieMericourt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 /*# sourceMappingURL=style.css.map */
