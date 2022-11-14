@@ -4,6 +4,7 @@ body {
   padding: 0;
   font-family: "Roboto", sans-serif;
   background: #F7F7F7;
+  animation: noScroll 1ms 3s forwards;
 }
 
 p {
@@ -54,6 +55,7 @@ footer {
   background: #353535;
   color: #ffffff;
   margin-top: -15px;
+  transform: translateY(1px);
 }
 
 .boxFooter {
@@ -143,6 +145,11 @@ footer {
   font-size: 24px;
   margin-bottom: 26px;
 }
+.fonctionnement_box_indicationBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .fonctionnement_box_indicationBox_part {
   height: 72.38px;
   background: #F7F7F7;
@@ -150,8 +157,9 @@ footer {
   border-radius: 20px;
   display: flex;
   align-items: center;
-  margin-left: 10px;
   margin-bottom: 25px;
+  max-width: 353px;
+  width: 100%;
 }
 .fonctionnement_box_indicationBox_part:hover {
   background: #F5EDFF;
@@ -187,6 +195,9 @@ footer {
   padding-left: 20px;
   padding-right: 20px;
   margin-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .restaurants h2 {
   font-weight: 700;
@@ -202,6 +213,8 @@ footer {
   height: 251px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 18px;
+  width: 100%;
+  max-width: 450px;
 }
 .restaurants_card_top {
   align-self: flex-end;
@@ -322,16 +335,16 @@ footer {
   margin-top: 9px;
 }
 .menu_box_list .firstLine {
-  animation: delayAppear 700ms 1000ms forwards ease-in-out;
+  animation: delayAppear 700ms 600ms forwards ease-in-out;
 }
 .menu_box_list .secondLine {
-  animation: delayAppear 700ms 1200ms forwards ease-in-out;
+  animation: delayAppear 700ms 800ms forwards ease-in-out;
 }
 .menu_box_list .thirdLine {
-  animation: delayAppear 700ms 1400ms forwards ease-in-out;
+  animation: delayAppear 700ms 1000ms forwards ease-in-out;
 }
 .menu_box_list .fourthLine {
-  animation: delayAppear 700ms 1800ms forwards ease-in-out;
+  animation: delayAppear 700ms 1400ms forwards ease-in-out;
 }
 .menu_box_list_line {
   background: #FFFFFF;
@@ -418,6 +431,189 @@ footer {
 }
 .imgMenu {
   width: 100%;
+}
+
+.back {
+  position: absolute;
+  left: 23px;
+}
+
+.container {
+  opacity: 0;
+  animation: contentAnim 300ms 3200ms forwards;
+}
+
+@keyframes contentAnim {
+  0% {
+    opacity: 0;
+    height: 0px;
+  }
+  100% {
+    opacity: 1;
+    height: max-content;
+  }
+}
+.loaderBox {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  opacity: 1;
+  animation: loaderAnim 3000ms forwards;
+}
+.loaderBox_animation {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.loaderBox_animation_cookingPot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: max-content;
+}
+.loaderBox_animation_cookingPot_marmite {
+  width: 74px;
+}
+.loaderBox_animation_cookingPot_couvercle {
+  width: 58px;
+  margin-bottom: 5px;
+  animation: mijot 600ms 3 forwards;
+}
+.loaderBox_animation_cookingPot_smoke {
+  width: 30px;
+  align-self: flex-end;
+  animation: smokeAnim 1300ms 2 forwards ease-in;
+}
+.loaderBox_animation_progress {
+  width: 200px;
+  height: 10px;
+  padding: 2px;
+  border-radius: 10px;
+  border: #9356DC solid 3px;
+  margin-top: 15px;
+}
+.loaderBox_animation_progress div {
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  animation: progressAnim 2800ms forwards;
+  transform-origin: left;
+}
+
+@keyframes progressAnim {
+  0% {
+    transform: scaleX(0);
+  }
+  80% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes smokeAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+@keyframes mijot {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(3deg);
+  }
+  40% {
+    transform: rotate(-3deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes loaderAnim {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement h2 {
+    margin-bottom: 35px;
+  }
+  .fonctionnement_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fonctionnement_box_indicationBox_part {
+    width: 300px;
+  }
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .restaurants h2 {
+    margin-bottom: 35px;
+  }
+  .restaurants_card {
+    width: 450px;
+    margin-bottom: 50px;
+  }
+  .boxFooter {
+    align-items: center;
+  }
+  .boxFooter_link {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 20px;
+    max-width: 700px;
+  }
+  .boxFooter_link div {
+    width: max-content;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu_title img {
+    margin-left: 24px;
+  }
+  .menu_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu_box_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu_box_list_line {
+    width: 400px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
