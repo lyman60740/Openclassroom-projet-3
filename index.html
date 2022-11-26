@@ -5,29 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>ohmyfood</title>
 </head>
 <body>
     <div class="loaderBox">
         <div class="loaderBox_animation">
             <div class="loaderBox_animation_cookingPot">
-                <img src="./Maquettes Ohmyfood/images/logo/smoke.png" alt="smoke" class="loaderBox_animation_cookingPot_smoke">
-                <img src="./Maquettes Ohmyfood/images/logo/couvercle.png" alt="couvercle" class="loaderBox_animation_cookingPot_couvercle">
-                <img src="./Maquettes Ohmyfood/images/logo/marmite.png" alt="marmite" class="loaderBox_animation_cookingPot_marmite">
+                <img src="./assets/smoke.png" alt="smoke" class="loaderBox_animation_cookingPot_smoke">
+                <img src="./assets/couvercle.png" alt="couvercle" class="loaderBox_animation_cookingPot_couvercle">
+                <img src="./assets/marmite.png" alt="marmite" class="loaderBox_animation_cookingPot_marmite">
             </div>
             <div class="loaderBox_animation_progress">
-                <div></div>
+                <div class="restaurants_card_bottom_like_img"></div>
             </div>
         </div>
     </div>
     <div class="container">
         <header>
-            <img src="./Maquettes Ohmyfood/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
+            <img src="./assets/ohmyfood@2x.svg" alt="logo ohmyfood">
         </header>
     
         <div class="localisationBox">
             <div>
-                <img src="./Maquettes Ohmyfood/images/logo/Pin.svg" alt="Localisation icon">
+                <img src="./assets/Pin.svg" alt="Localisation icon">
                 <span>Paris, Belleville</span>
             </div>
         </div>
@@ -76,73 +77,89 @@
         </section>
         <section class="restaurants">
             <h2>Restaurants</h2>
-            <a href="./paletteDuGout.html" class="restaurants_card menilmontant">
-                <div class="restaurants_card_top"><span>Nouveau</span></div>
-                <div class="restaurants_card_bottom">
-                    <div class="restaurants_card_bottom_info">
-                        <h3>La palette du goût</h3>
-                        <span>Ménilmontant</span>
-                    </div>
-                    <div class="restaurants_card_bottom_like">
-                        <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.2208 2.40551L12.2206 2.40576L11.3741 3.35732L11.0005 3.77727L10.627 3.35732L9.78047 2.40576L9.77992 2.40514C7.78271 0.152585 4.59762 -0.169649 2.47664 1.80201C-0.0175439 4.1245 -0.15494 8.32357 2.0848 10.8495L10.399 20.2148C10.399 20.2149 10.399 20.2149 10.3991 20.2149C10.7372 20.5955 11.2595 20.5955 11.5977 20.2149C11.5977 20.2149 11.5978 20.2149 11.5978 20.2148L19.9122 10.8493L19.9123 10.8492C22.1559 8.32335 22.0186 4.12461 19.5245 1.80213L12.2208 2.40551ZM12.2208 2.40551C14.2226 0.15233 17.4035 -0.169452 19.5243 1.80187L12.2208 2.40551Z" stroke="#101010"/>
-                        </svg>
-    
-                    </div>
-                </div>
-            </a>
-            <a href="./noteEnchantee.html" class="restaurants_card charonne">
-                <div class="restaurants_card_top"><span>Nouveau</span></div>
-                <div class="restaurants_card_bottom">
-                    <div class="restaurants_card_bottom_info">
-                        <h3>La note enchantée</h3>
-                        <span>Charonne</span>
-                    </div>
-                    <div class="restaurants_card_bottom_like">
-                        <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.2208 2.40551L12.2206 2.40576L11.3741 3.35732L11.0005 3.77727L10.627 3.35732L9.78047 2.40576L9.77992 2.40514C7.78271 0.152585 4.59762 -0.169649 2.47664 1.80201C-0.0175439 4.1245 -0.15494 8.32357 2.0848 10.8495L10.399 20.2148C10.399 20.2149 10.399 20.2149 10.3991 20.2149C10.7372 20.5955 11.2595 20.5955 11.5977 20.2149C11.5977 20.2149 11.5978 20.2149 11.5978 20.2148L19.9122 10.8493L19.9123 10.8492C22.1559 8.32335 22.0186 4.12461 19.5245 1.80213L12.2208 2.40551ZM12.2208 2.40551C14.2226 0.15233 17.4035 -0.169452 19.5243 1.80187L12.2208 2.40551Z" stroke="#101010"/>
-                        </svg>
-    
+            <div class="restaurants_box">
+                <div class="restaurants_card menilmontant">
+                    <a href="./paletteDuGout.html" class="restaurants_card_top">
+                        
+                        <span>Nouveau</span>
+                    </a>
+                    <div class="restaurants_card_bottom">
+                        <a href="./paletteDuGout.html" class="restaurants_card_bottom_info">
+                            <h3>La palette du goût</h3>
+                            <span>Ménilmontant</span>
+                        </a>
+                        <div class="restaurants_card_bottom_like">
+                            <div class="restaurants_card_bottom_like">
+                                <img src="./assets/heart.svg" alt="" class="restaurants_card_bottom_like_empty">
+                                <img src="./assets/heartFill.svg" alt="" class="restaurants_card_bottom_like_fill">
+                            </div>
+        
+                        </div>
                     </div>
                 </div>
-            </a>
-            <a href="./alaFrancaise.html" class="restaurants_card citeRouge">
-                <div class="restaurants_card_bottom">
-                    <div class="restaurants_card_bottom_info">
-                        <h3>À la française</h3>
-                        <span>Cité Rouge</span>
-                    </div>
-                    <div class="restaurants_card_bottom_like">
-                        <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.2208 2.40551L12.2206 2.40576L11.3741 3.35732L11.0005 3.77727L10.627 3.35732L9.78047 2.40576L9.77992 2.40514C7.78271 0.152585 4.59762 -0.169649 2.47664 1.80201C-0.0175439 4.1245 -0.15494 8.32357 2.0848 10.8495L10.399 20.2148C10.399 20.2149 10.399 20.2149 10.3991 20.2149C10.7372 20.5955 11.2595 20.5955 11.5977 20.2149C11.5977 20.2149 11.5978 20.2149 11.5978 20.2148L19.9122 10.8493L19.9123 10.8492C22.1559 8.32335 22.0186 4.12461 19.5245 1.80213L12.2208 2.40551ZM12.2208 2.40551C14.2226 0.15233 17.4035 -0.169452 19.5243 1.80187L12.2208 2.40551Z" stroke="#101010"/>
-                        </svg>
-    
-                    </div>
-                </div>
-            </a>
-            <a href="./deliceSens.html" class="restaurants_card folieMericourt">
-                <div class="restaurants_card_bottom">
-                    <div class="restaurants_card_bottom_info">
-                        <h3>Le délice des sens</h3>
-                        <span>Folie-Méricourt</span>
-                    </div>
-                    <div class="restaurants_card_bottom_like">
-                        <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.2208 2.40551L12.2206 2.40576L11.3741 3.35732L11.0005 3.77727L10.627 3.35732L9.78047 2.40576L9.77992 2.40514C7.78271 0.152585 4.59762 -0.169649 2.47664 1.80201C-0.0175439 4.1245 -0.15494 8.32357 2.0848 10.8495L10.399 20.2148C10.399 20.2149 10.399 20.2149 10.3991 20.2149C10.7372 20.5955 11.2595 20.5955 11.5977 20.2149C11.5977 20.2149 11.5978 20.2149 11.5978 20.2148L19.9122 10.8493L19.9123 10.8492C22.1559 8.32335 22.0186 4.12461 19.5245 1.80213L12.2208 2.40551ZM12.2208 2.40551C14.2226 0.15233 17.4035 -0.169452 19.5243 1.80187L12.2208 2.40551Z" stroke="#101010"/>
-                        </svg>
-    
+
+                <div class="restaurants_card charonne">
+                    <a href="./noteEnchantee.html" class="restaurants_card_top">
+                        <span>Nouveau</span>
+                    </a>
+                    <div class="restaurants_card_bottom">
+                        <a href="./noteEnchantee.html" class="restaurants_card_bottom_info">
+                            <h3>La note enchantée</h3>
+                            <span>Charonne</span>
+                        </a>
+                        <div class="restaurants_card_bottom_like">
+                            <div class="restaurants_card_bottom_like">
+                                <img src="./assets/heart.svg" alt="" class="restaurants_card_bottom_like_empty">
+                                <img src="./assets/heartFill.svg" alt="" class="restaurants_card_bottom_like_fill">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </a>
+
+                <div class="restaurants_card citeRouge">
+                    <a href="./alaFrancaise.html" class="restaurants_card_top">
+                    </a>
+                    <div class="restaurants_card_bottom">
+                        <a href="./alaFrancaise.html" class="restaurants_card_bottom_info">
+                            <h3>À la française</h3>
+                            <span>Cité Rouge</span>
+                        </a>
+                        <div class="restaurants_card_bottom_like">
+                            <div class="restaurants_card_bottom_like">
+                                <img src="./assets/heart.svg" alt="" class="restaurants_card_bottom_like_empty">
+                                <img src="./assets/heartFill.svg" alt="" class="restaurants_card_bottom_like_fill">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="restaurants_card folieMericourt">
+                    <a href="./deliceSens.html" class="restaurants_card_top">
+                    </a>
+                    <div class="restaurants_card_bottom">
+                        <a href="./deliceSens.html" class="restaurants_card_bottom_info">
+                            <h3>Le délice des sens</h3>
+                            <span>Folie-Méricourt</span>
+                        </a>
+                        <div class="restaurants_card_bottom_like">
+                            <div class="restaurants_card_bottom_like">
+                                <img src="./assets/heart.svg" alt="" class="restaurants_card_bottom_like_empty">
+                                <img src="./assets/heartFill.svg" alt="" class="restaurants_card_bottom_like_fill">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
         <footer>
             <div class="boxFooter">
-                <img src="./Maquettes Ohmyfood/images/logo/ohmyfood-footer.svg" alt="Logo ohmyfood" class="boxFooter_logo">
+                <img src="./assets/ohmyfood-footer.svg" alt="Logo ohmyfood" class="boxFooter_logo">
                 <div class="boxFooter_link">
                     <div>
-                        <img src="./Maquettes Ohmyfood/images/logo/couverts.svg" alt="icon couverts">  <a href="#">Proposer un restaurant</a>
+                        <img src="./assets/couverts.svg" alt="icon couverts">  <a href="#">Proposer un restaurant</a>
                         </div>
-                        <div><img src="./Maquettes Ohmyfood/images/logo/Vector.svg" alt="partenaire icon"> <a href="#">Devenir partenaire</a>
+                        <div><img src="./assets/Vector.svg" alt="partenaire icon"> <a href="#">Devenir partenaire</a>
                         </div> 
                         <a href="#">Mentions légales</a>
                         <a href="mailto:lyman.abid@gmail.com">Contact</a>

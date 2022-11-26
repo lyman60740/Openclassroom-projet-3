@@ -49,6 +49,7 @@ header {
 }
 
 footer {
+  width: 100%;
   height: 180px;
   padding-top: 22px;
   padding-left: 25px;
@@ -198,12 +199,17 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 335px;
+}
+.restaurants_box {
+  width: 100%;
 }
 .restaurants h2 {
   font-weight: 700;
   font-size: 24px;
   margin-bottom: 25px;
   margin-top: 52px;
+  align-self: flex-start;
 }
 .restaurants_card {
   border-radius: 15px;
@@ -214,19 +220,30 @@ footer {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 18px;
   width: 100%;
-  max-width: 450px;
+  max-width: 335px;
+  z-index: 1;
 }
 .restaurants_card_top {
-  align-self: flex-end;
-  width: 80px;
-  height: 29px;
+  height: 75%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.restaurants_card_top img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.restaurants_card_top span {
+  position: absolute;
+  margin-left: 251px;
+  margin-top: 16px;
   background: #99E2D0;
+  padding: 7px 9px;
   color: #008766;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 13px;
-  margin-right: 12px;
+  border-radius: 2px;
+  font-weight: 500;
+  font-size: 14px;
 }
 .restaurants_card_bottom {
   background: white;
@@ -236,6 +253,7 @@ footer {
   justify-content: space-between;
   padding-left: 13px;
   padding-bottom: 12px;
+  padding-top: 16px;
 }
 .restaurants_card_bottom_info {
   display: flex;
@@ -258,45 +276,56 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
-.restaurants_card_bottom_like svg path {
-  fill: linear-gradient(#e66465, #9198e5);
+.restaurants_card_bottom_like_empty {
+  z-index: 1;
+}
+.restaurants_card_bottom_like_fill {
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+}
+.restaurants_card_bottom_like_fill:hover {
+  animation: like 300ms forwards ease;
 }
 
-.menilmontant, .charonne, .citeRouge, .folieMericourt {
+.menilmontant .restaurants_card_top {
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: top 100% left 100%;
+  background-image: url("./assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
 }
 
-.menilmontant {
-  background-position: right -1px bottom 75px;
-  background-size: 100% 100%;
-  background-image: url("./Maquettes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+.charonne .restaurants_card_top {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top 61% left 100%;
+  background-image: url("./assets/stil-u2Lp8tXIcjw-unsplash.jpg");
 }
 
-.charonne {
-  background-size: 101% 170%;
-  background-position: right -1px bottom -24px;
-  background-image: url("./Maquettes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+.citeRouge .restaurants_card_top {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top 100% left 100%;
+  background-image: url("./assets/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }
 
-.citeRouge {
-  background-position: right -1px bottom 75px;
-  background-size: 100% 100%;
-  background-image: url("./Maquettes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+.folieMericourt .restaurants_card_top {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top 100% left 100%;
+  background-image: url("./assets/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 
-.folieMericourt {
-  background-position: right -1px bottom 75px;
-  background-size: 100% 100%;
-  background-image: url("./Maquettes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+@keyframes like {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
-.citeRouge, .folieMericourt {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
 .menu {
   padding: 32px 13px 0 13px;
   background: #F7F7F7;
@@ -441,6 +470,9 @@ footer {
 .container {
   opacity: 0;
   animation: contentAnim 300ms 3200ms forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @keyframes contentAnim {
@@ -557,28 +589,129 @@ footer {
   }
 }
 @media screen and (min-width: 768px) {
-  .fonctionnement h2 {
-    margin-bottom: 35px;
+  footer {
+    display: flex;
+    align-items: center;
+  }
+  .boxFooter {
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .boxFooter_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80% !important;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .boxFooter_link a {
+    white-space: nowrap;
+  }
+  .boxFooter_link div {
+    display: flex;
+    width: max-content;
+    margin: 0;
   }
   .fonctionnement_box {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  .fonctionnement_box_indicationBox {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .imgMenu {
+    max-height: 415px;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  .menu {
+    transform: translateY(-63px);
+    margin: 0 12% 0 12%;
+    padding: 32px 15% 0 15%;
+  }
+  .menu_box {
+    width: 100%;
+  }
+  .menu_box_title {
+    width: 634px;
+  }
+  .menu_box_list {
+    width: 100%;
+  }
+  .menu_box_list_line {
+    width: 634px;
+  }
+  .fonctionnement {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    height: max-content;
+  }
+  .fonctionnement h2 {
+    margin-bottom: 28px;
+    align-self: flex-start;
+  }
+  .fonctionnement_box {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    padding: 0;
+  }
+  .fonctionnement_box_indicationBox {
+    flex-direction: row;
+    width: max-content;
+  }
+  .fonctionnement_box_indicationBox :nth-child(3) {
+    margin-right: 0;
+  }
   .fonctionnement_box_indicationBox_part {
     width: 300px;
+    margin-right: 32px;
+  }
+  .fonctionnement_box_indicationBox_part_box {
+    align-items: center;
+    width: 300px;
+  }
+  .fonctionnement_box_indicationBox_part_box_number {
+    width: 42px;
+    height: 42px;
   }
   .restaurants {
+    align-items: center;
+    width: 75%;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .restaurants_box {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
   }
   .restaurants h2 {
     margin-bottom: 35px;
   }
   .restaurants_card {
-    width: 450px;
+    min-width: 330px;
     margin-bottom: 50px;
+    margin-right: 26px;
+    scroll-snap-align: start;
+  }
+  .restaurants_card_top {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .restaurants_card_top span {
+    position: inherit;
+    height: max-content;
+    margin: 13px;
   }
   .boxFooter {
     align-items: center;
@@ -610,9 +743,6 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  .menu_box_list_line {
-    width: 400px;
   }
 }
 
