@@ -388,6 +388,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   opacity: 0;
+  cursor: pointer;
 }
 .menu_box_list_line:hover .menu_box_list_line_right_validate {
   animation: slideIn 500ms forwards ease-in-out;
