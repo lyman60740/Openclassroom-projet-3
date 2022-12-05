@@ -606,6 +606,7 @@ footer {
   .boxFooter {
     align-items: center;
     margin-bottom: 50px;
+    width: 100%;
   }
   .boxFooter_link {
     display: flex;
