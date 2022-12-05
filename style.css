@@ -35,11 +35,9 @@ h1, h3, h2 {
   border: none;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
-  transition: all 300ms;
 }
 .ctaBox_cta:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  box-shadow: 0px 8px 10px rgb(0 0 0 / 25%);
 }
 
 header {
@@ -54,6 +52,7 @@ footer {
   width: 100%;
   height: 180px;
   padding-top: 22px;
+  padding-left: 25px;
   background: #353535;
   color: #ffffff;
   margin-top: -15px;
@@ -65,7 +64,6 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  margin-left: 25px;
 }
 .boxFooter_logo {
   margin-bottom: 18px;
@@ -116,7 +114,7 @@ footer {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  padding: 34px 34px 57px 34px;
+  padding: 34px;
   width: 65%;
 }
 .discover_box h2 {
@@ -166,7 +164,6 @@ footer {
 }
 .fonctionnement_box_indicationBox_part:hover {
   background: #F5EDFF;
-  transition: all 300ms;
 }
 .fonctionnement_box_indicationBox_part:hover svg path {
   fill: #9356DC;
@@ -388,7 +385,6 @@ footer {
   justify-content: space-between;
   align-items: center;
   opacity: 0;
-  cursor: pointer;
 }
 .menu_box_list_line:hover .menu_box_list_line_right_validate {
   animation: slideIn 500ms forwards ease-in-out;
