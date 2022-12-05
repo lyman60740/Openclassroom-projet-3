@@ -77,7 +77,6 @@ footer {
   font-weight: 500;
   font-size: 16px;
   width: 100%;
-  margin-bottom: 7px;
   display: flex;
 }
 .boxFooter div img {
@@ -90,6 +89,9 @@ footer {
 }
 .boxFooter img {
   margin-right: 11px;
+}
+.boxFooter a {
+  margin-bottom: 7px;
 }
 
 .localisationBox {
