@@ -404,7 +404,7 @@ footer {
 }
 .menu_box_list_line_left {
   margin-left: 10px;
-  max-width: 255px;
+  max-width: 60%;
 }
 .menu_box_list_line_left p {
   text-overflow: ellipsis;
@@ -705,6 +705,7 @@ footer {
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    flex-wrap: wrap;
   }
   .restaurants h2 {
     margin-bottom: 35px;
