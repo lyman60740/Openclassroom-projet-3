@@ -79,7 +79,6 @@ footer {
   width: 100%;
   margin-bottom: 7px;
   display: flex;
-  flex-direction: column;
 }
 .boxFooter div img {
   height: 13px;
